@@ -178,7 +178,7 @@
     P.player.load(id, function(stage) {
       stage.triggerGreenFlag();
     }, function(title) {
-      document.title = title ? title + ' \xb7 phosphorus' : 'phosphorus';
+      document.title = title ? title + ' \xb7 Scris Edited Phosphorus' : 'Scris Edited Phosphorus';
       updateBugLink();
     });
 
@@ -189,7 +189,7 @@
   }
 
   function updatePackageLink() {
-    packageLink.href = P.player.projectId ? '/app.html?id=' + P.player.projectId + '&turbo=' + packageTurbo.checked + '&full-screen=' + packageFullScreen.checked : 'about:blank';
+    packageLink.href = P.player.projectId ? '/s-phosphorus/app.html?id=' + P.player.projectId + '&turbo=' + packageTurbo.checked + '&full-screen=' + packageFullScreen.checked : 'about:blank';
   }
 
   packageTurbo.addEventListener('change', updatePackageLink);
