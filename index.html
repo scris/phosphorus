@@ -174,7 +174,7 @@
       id = '';
     }
 
-    document.title = 'phosphorus';
+    document.title = 'Scris Edited Phosphorus';
     P.player.load(id, function(stage) {
       stage.triggerGreenFlag();
     }, function(title) {
@@ -188,10 +188,6 @@
     updateEmbedCode();
   }
 
-  function updateBugLink() {
-    bugLink.href = P.player.projectId ? 'https://github.com/nathan/phosphorus/issues/new?title=' + encodeURIComponent(P.player.projectTitle || P.player.projectURL) + '&body=' + encodeURIComponent('\n\n\n' + P.player.projectURL + '\nhttps://phosphorus.github.io/#' + P.player.projectId + '\n' + navigator.userAgent) : 'https://github.com/nathan/phosphorus/issues/new?body=' + encodeURIComponent('\n\n\n' + navigator.userAgent);
-  }
-
   function updatePackageLink() {
     packageLink.href = P.player.projectId ? '/app.html?id=' + P.player.projectId + '&turbo=' + packageTurbo.checked + '&full-screen=' + packageFullScreen.checked : 'about:blank';
   }
@@ -200,7 +196,7 @@
   packageFullScreen.addEventListener('change', updatePackageLink);
 
   function updateEmbedCode(e) {
-    embedCode.value = P.player.projectId ? '<script src=https://' + location.host + '/embed.js?id=' + P.player.projectId + (embedHideControls.checked ? '&ui=false' : '&auto-start=' + embedAutoStart.checked + '&light-content=' + embedLightContent.checked) + '></' + 'script>' : '';
+    embedCode.value = P.player.projectId ? '<script src=https://' + location.host + '/s-phosphorus/embed.js?id=' + P.player.projectId + (embedHideControls.checked ? '&ui=false' : '&auto-start=' + embedAutoStart.checked + '&light-content=' + embedLightContent.checked) + '></' + 'script>' : '';
     embedAutoStart.disabled =
     embedLightContent.disabled = embedHideControls.checked;
     if (embedHideControls.checked) embedAutoStart.checked = true;
